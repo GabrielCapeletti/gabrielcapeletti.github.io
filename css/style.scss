@@ -1,0 +1,205 @@
+$fadeTime: 0.6s;
+
+%description-text{
+    margin-top:15px; 
+    color: rgb(12, 22, 39);
+    text-align: justify;
+}
+
+%img-cover{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+%title-font{
+    color: rgb(0, 4, 10);
+    font-family: 'Questrial', sans-serif;  
+    height: 100%;     
+}
+
+body, html {
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.basic-info{    
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    @extend %title-font;      
+}
+
+.back-btn{
+    @extend %title-font;      
+    margin-bottom: 0px;
+    font-size: 1em;
+}
+
+.data-list{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.game-description{
+    @extend .game-info;
+    margin-top: 40px;
+}
+.game-info{
+    color: rgb(16, 22, 32);
+    font-family: 'Questrial', sans-serif;  
+    height: 100%;         
+    font-size: 1.1rem !important;       
+}
+
+.project-title{
+    @extend %title-font;      
+}
+
+.position-title{
+    @extend %title-font;   
+    color: rgb(135, 140, 150);
+    margin-top: -5px !important;
+    font-size: 1.5rem !important;   
+}
+
+.banner-video{    
+    width: 100%;    
+    height: 586px;
+}
+
+.banner{    
+    @extend %img-cover;   
+}
+
+.top-buffer { 
+    margin-top:20px; 
+}
+
+.minor-top-buffer { 
+    margin-top:10px; 
+}
+
+.right-buffer { 
+    margin-right: 80px;
+}
+
+.name{    
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.title{
+    margin-top:-10px; 
+    color: rgb(135, 140, 150);
+}
+
+.description{
+    @extend %description-text;
+}
+
+.short-description{
+    @extend %description-text;   
+    display: none; 
+}
+
+.thumb-title{
+    @extend %title-font;   
+    font-weight: bold;   
+    font-size: 2rem;
+    margin-top: -45px;
+    margin-left: 15px;
+    opacity: 1 !important;
+}
+
+.thumb-img{    
+    @extend %img-cover;
+}
+
+.thumb-img:hover{
+    opacity: 0.75;
+}
+
+.thumb{
+    padding-top:30px;
+    width: 100%;
+    height: 300px;
+}
+
+.fadeIn {
+    animation: fadeIn $fadeTime;
+}
+
+.fadeOut {
+    animation: fadeOut $fadeTime;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+  
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-100px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }    
+}
+
+@media (max-width: 576px) {
+    .basic-info{
+        height: auto;
+    }
+    .basic-info-placeholder{
+        display: none; 
+    }
+    .short-description{        
+        display: block;
+    }
+    .description{        
+        display: none;
+    }   
+}
+
+@media (min-width: 576px) {
+    .basic-info{           
+        position: fixed;
+    }        
+}
+
+@media (min-width: 768px) { 
+    .banner-video{    
+        height: 432px;
+    }
+}
+
+@media (min-width: 250px) { 
+    .banner-video{    
+        height: 154px;
+    }
+}
+
+@media (min-width: 480px) { 
+    .banner-video{    
+        height: 320px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .basic-info{                   
+        width: 350px;
+    }
+
+    .banner-video{    
+        height: 432px;
+    }
+}
+
+

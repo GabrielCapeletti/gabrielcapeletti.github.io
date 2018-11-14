@@ -1,0 +1,134 @@
+.description, .short-description {
+  margin-top: 15px;
+  color: #0c1627;
+  text-align: justify; }
+
+.banner, .thumb-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
+.basic-info, .back-btn, .project-title, .position-title, .thumb-title {
+  color: #00040a;
+  font-family: 'Questrial', sans-serif;
+  height: 100%; }
+
+body, html {
+  height: 100%;
+  background-color: white; }
+
+.basic-info {
+  z-index: 1000;
+  background-color: white; }
+
+.back-btn {
+  margin-bottom: 0px;
+  font-size: 1em; }
+
+.data-list {
+  list-style: none;
+  padding-left: 0px; }
+
+.game-description {
+  margin-top: 40px; }
+
+.game-info, .game-description {
+  color: #101620;
+  font-family: 'Questrial', sans-serif;
+  height: 100%;
+  font-size: 1.1rem !important; }
+
+.position-title {
+  color: #878c96;
+  margin-top: -5px !important;
+  font-size: 1.5rem !important; }
+
+.banner-video {
+  width: 100%;
+  height: 586px; }
+
+.top-buffer {
+  margin-top: 20px; }
+
+.minor-top-buffer {
+  margin-top: 10px; }
+
+.right-buffer {
+  margin-right: 80px; }
+
+.name {
+  font-size: 2rem;
+  font-weight: 400; }
+
+.title {
+  margin-top: -10px;
+  color: #878c96; }
+
+.short-description {
+  display: none; }
+
+.thumb-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: -45px;
+  margin-left: 15px;
+  opacity: 1 !important; }
+
+.thumb-img:hover {
+  opacity: 0.75; }
+
+.thumb {
+  padding-top: 30px;
+  width: 100%;
+  height: 300px; }
+
+.fadeIn {
+  animation: fadeIn 0.6s; }
+
+.fadeOut {
+  animation: fadeOut 0.6s; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@media (max-width: 576px) {
+  .basic-info {
+    height: auto; }
+
+  .basic-info-placeholder {
+    display: none; }
+
+  .short-description {
+    display: block; }
+
+  .description {
+    display: none; } }
+@media (min-width: 576px) {
+  .basic-info {
+    position: fixed; } }
+@media (min-width: 768px) {
+  .banner-video {
+    height: 432px; } }
+@media (min-width: 250px) {
+  .banner-video {
+    height: 154px; } }
+@media (min-width: 480px) {
+  .banner-video {
+    height: 320px; } }
+@media (min-width: 1200px) {
+  .basic-info {
+    width: 350px; }
+
+  .banner-video {
+    height: 432px; } }
+
+/*# sourceMappingURL=style.css.map */
