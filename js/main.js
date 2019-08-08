@@ -1,9 +1,15 @@
 var SubPageContent = {
     MAIN: "main",
+    LOONEY: "looney",
     TETRAGON: "tetragon",
-    DOM: "dombosco",
+    NECRO: "necro",
+    DOM: "dom",
     KEEN: "keen",
-    KIKO: "kiko"
+    KIKO: "kiko",
+    ALIEN: "alien",
+    PONG: "pong",
+    BUSTED: "busted",
+    ESCAPE: "escape"
   };
 
 var currentSubPage = SubPageContent.MAIN;
@@ -27,11 +33,16 @@ $(document).ready(function() {
         });   
         
        
-        $( "#back-btn" ).click(function() {                
+        $( ".back-btn" ).click(function() {      
+            $('.banner-video').each(function(){                
+                var vidsrc = $(this).attr('src');                
+                $(this).attr('src',''); 
+                $(this).attr('src', vidsrc);
+            });          
             ActivateSubpage(SubPageContent.MAIN);
         });
 
-        $( "#back-btn"  ).mouseover(function() {
+        $( ".back-btn"  ).mouseover(function() {
             $('html,body').css('cursor','pointer');
         }).mouseout(function() {
             $('html,body').css('cursor','default');

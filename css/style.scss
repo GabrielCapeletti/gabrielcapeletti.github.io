@@ -88,6 +88,11 @@ body, html {
     font-weight: 400;
 }
 
+.section{    
+    @extend .name;
+    border-bottom: 2px solid black;
+}
+
 .title{
     margin-top:-10px; 
     color: rgb(135, 140, 150);
@@ -102,24 +107,57 @@ body, html {
     display: none; 
 }
 
+.thumb-title-text{
+    margin-top: -90px;
+}
+
+.thumb-title-bg{
+    width: 100%;    
+}
+
 .thumb-title{
     @extend %title-font;   
+    color: rgb(255, 255, 255);
+    height: auto !important;
     font-weight: bold;   
+    padding-left: 10px;
     font-size: 2rem;
-    margin-top: -45px;
-    margin-left: 15px;
+    position: absolute; 
+    margin-top: -75px;  
     opacity: 1 !important;
 }
 
-.thumb-img{    
-    @extend %img-cover;
+.thumb-maintitle{
+    @extend .thumb-title;           
+    margin-top: -90px;        
 }
 
-.thumb-img:hover{
+.thumb-subtitle{
+    @extend .thumb-title;   
+    font-size: 1.5rem;    
+    margin-top: -15px;
+    padding-left: 0px;
+}
+
+.thumb-img{    
+    @extend %img-cover; 
+    border-radius: 15px;
+}
+
+.thumb-black-bg{
+    border-radius: 0px 0px 15px 15px;
+    opacity: 0.6;
+    object-fit: cover;
+    width: 100%;
+    height: 24%;
+    margin-top: -90px;
+}
+
+.thumb:hover{
     opacity: 0.75;
 }
 
-.thumb{
+.thumb{    
     padding-top:30px;
     width: 100%;
     height: 300px;

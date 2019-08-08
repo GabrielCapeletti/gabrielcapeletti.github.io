@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%; }
 
-.basic-info, .back-btn, .project-title, .position-title, .thumb-title {
+.basic-info, .back-btn, .project-title, .position-title, .thumb-title, .thumb-maintitle, .thumb-subtitle {
   color: #00040a;
   font-family: 'Questrial', sans-serif;
   height: 100%; }
@@ -56,9 +56,12 @@ body, html {
 .right-buffer {
   margin-right: 80px; }
 
-.name {
+.name, .section {
   font-size: 2rem;
   font-weight: 400; }
+
+.section {
+  border-bottom: 2px solid black; }
 
 .title {
   margin-top: -10px;
@@ -67,14 +70,42 @@ body, html {
 .short-description {
   display: none; }
 
-.thumb-title {
+.thumb-title-text {
+  margin-top: -90px; }
+
+.thumb-title-bg {
+  width: 100%; }
+
+.thumb-title, .thumb-maintitle, .thumb-subtitle {
+  color: white;
+  height: auto !important;
   font-weight: bold;
+  padding-left: 10px;
   font-size: 2rem;
-  margin-top: -45px;
-  margin-left: 15px;
+  position: absolute;
+  margin-top: -75px;
   opacity: 1 !important; }
 
-.thumb-img:hover {
+.thumb-maintitle {
+  margin-top: -90px; }
+
+.thumb-subtitle {
+  font-size: 1.5rem;
+  margin-top: -15px;
+  padding-left: 0px; }
+
+.thumb-img {
+  border-radius: 15px; }
+
+.thumb-black-bg {
+  border-radius: 0px 0px 15px 15px;
+  opacity: 0.6;
+  object-fit: cover;
+  width: 100%;
+  height: 24%;
+  margin-top: -90px; }
+
+.thumb:hover {
   opacity: 0.75; }
 
 .thumb {
