@@ -9,7 +9,8 @@ var SubPageContent = {
     ALIEN: "alien",
     PONG: "pong",
     BUSTED: "busted",
-    ESCAPE: "escape"
+    ESCAPE: "escape",
+    ROT: "rot"
   };
 
 var currentSubPage = SubPageContent.MAIN;
@@ -33,12 +34,7 @@ $(document).ready(function() {
         });   
         
        
-        $( ".back-btn" ).click(function() {      
-            $('.banner-video').each(function(){                
-                var vidsrc = $(this).attr('src');                
-                $(this).attr('src',''); 
-                $(this).attr('src', vidsrc);
-            });          
+        $( ".back-btn" ).click(function() {                     
             ActivateSubpage(SubPageContent.MAIN);
         });
 
@@ -51,6 +47,18 @@ $(document).ready(function() {
     }
 
     function ActivateSubpage(subPage){
+        if(this.currentSubPage != SubPageContent.MAIN && subPage == SubPageContent.MAIN)
+        {
+            $('.banner-video').each(
+                function()
+                {                
+                    var vidsrc = $(this).attr('src');                
+                    $(this).attr('src',''); 
+                    $(this).attr('src', vidsrc);
+                }
+            );      
+        }
+
         $( "."+this.currentSubPage ).removeClass( "fadeOut" );
         $( "."+this.currentSubPage).css("display","none");    
         $( "."+this.currentSubPage ).addClass( "fadeOut" );
