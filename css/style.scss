@@ -26,13 +26,20 @@ body, html {
 .basic-info{    
     z-index: 1000;
     background-color: rgb(255, 255, 255);
+    background-color: white;
+    padding-top: 20px;
+    margin-top: -20px;
     @extend %title-font;      
 }
 
 .back-btn{
     @extend %title-font;      
     margin-bottom: 0px;
-    font-size: 1em;
+    font-size: 1.4em;
+}
+
+.back-btn:hover{
+    opacity: 0.5;
 }
 
 .data-list{
@@ -43,6 +50,7 @@ body, html {
 .game-description{
     @extend .game-info;
     margin-top: 40px;
+    text-align: justify;
 }
 .game-info{
     color: rgb(16, 22, 32);
@@ -129,8 +137,12 @@ body, html {
 
 .thumb-maintitle{
     @extend .thumb-title;           
-    margin-top: -90px;        
+    margin-top: -90px;    
+    margin-top: -90px;
+    width: 80%;
 }
+    
+
 
 .thumb-subtitle{
     @extend .thumb-title;   
