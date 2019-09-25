@@ -36,6 +36,9 @@ body, html {
     @extend %title-font;      
     margin-bottom: 0px;
     font-size: 1.4em;
+    height: 40px;
+    text-align: right;
+    font-weight: bolder;
 }
 
 .back-btn:hover{
